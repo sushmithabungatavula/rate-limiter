@@ -5,6 +5,14 @@ bucket or a sliding window algorithm, backed by Redis for shared, atomic
 state. It ships with a FastAPI backend, a live React dashboard for watching
 and generating traffic, and a full test suite.
 
+**Live:**
+
+- Dashboard: https://sushmitha-rate-limiter.vercel.app
+- API: https://rate-limiter-backend-gx1q.onrender.com
+
+The backend is on Render's free tier, which spins down after inactivity —
+the first request after a quiet period can take up to ~50s while it wakes.
+
 ## Architecture
 
 ```
@@ -169,6 +177,9 @@ verifies: firing 20 concurrent requests against a limit of 5 allows exactly
 ```bash
 docker exec backend pytest
 ```
+
+The same suite runs automatically in CI (`.github/workflows/backend-tests.yml`)
+on every push or PR that touches `backend/`.
 
 ## Potential improvements
 
