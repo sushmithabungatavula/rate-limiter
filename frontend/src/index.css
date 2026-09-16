@@ -1,0 +1,280 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #fafafa;
+  color: #1a1a1a;
+}
+
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 20px 60px;
+}
+
+h1 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #111111;
+}
+
+h2 {
+  font-size: 1.1rem;
+  margin: 0 0 12px;
+  color: #111111;
+}
+
+section {
+  margin-bottom: 32px;
+}
+
+/* Header stats */
+.header-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.card-label {
+  font-size: 0.8rem;
+  color: #767676;
+  margin-bottom: 6px;
+}
+
+.card-value {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #111111;
+}
+
+.status-value {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-green {
+  background: #4caf7d;
+}
+
+.dot-red {
+  background: #e0625f;
+}
+
+.text-red {
+  color: #c9504d;
+}
+
+.text-green {
+  color: #3f9c6d;
+}
+
+/* Simulator */
+.simulator {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.simulator-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.simulator-inputs label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  color: #767676;
+  gap: 4px;
+}
+
+.simulator-inputs input,
+.simulator-inputs select {
+  background: #fafafa;
+  border: 1px solid #dcdcdc;
+  color: #1a1a1a;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 0.9rem;
+  min-width: 140px;
+}
+
+.simulator-inputs input:focus,
+.simulator-inputs select:focus {
+  outline: none;
+  border-color: #a8b8e8;
+  background: #ffffff;
+}
+
+.simulator-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.simulator-buttons button {
+  background: #5b7fd9;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.simulator-buttons button:hover {
+  background: #4c6bc0;
+}
+
+.burst-summary {
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+.response-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.response-card {
+  display: flex;
+  gap: 20px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  border-left: 4px solid transparent;
+}
+
+.response-card.allowed {
+  background: #f1f8f4;
+  border-left-color: #4caf7d;
+}
+
+.response-card.denied {
+  background: #fbf2f2;
+  border-left-color: #e0625f;
+}
+
+/* Client table */
+.client-table {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 10px 8px;
+  border-bottom: 1px solid #eeeeee;
+  font-size: 0.88rem;
+}
+
+th {
+  color: #767676;
+  font-weight: 500;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+tr.row-throttled {
+  background: #fdf5f5;
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badge-green {
+  background: #e6f4ec;
+  color: #3f9c6d;
+}
+
+.badge-red {
+  background: #faeaea;
+  color: #c9504d;
+}
+
+.empty-state {
+  color: #767676;
+  font-size: 0.9rem;
+}
+
+/* Algorithm explainer */
+.explainer-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.explainer-card {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.explainer-card h3 {
+  margin: 0 0 12px;
+  color: #111111;
+}
+
+.explainer-card pre {
+  background: #f5f6f8;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 0.8rem;
+  overflow-x: auto;
+  color: #3f5a99;
+}
+
+.explainer-card p {
+  font-size: 0.88rem;
+  color: #4a4a4a;
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  .header-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .explainer-cards {
+    grid-template-columns: 1fr;
+  }
+}

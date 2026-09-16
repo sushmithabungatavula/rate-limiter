@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: rate-limiter-backend
+    runtime: docker
+    plan: free
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    envVars:
+      - key: REDIS_URL
+        sync: false
+      - key: CORS_ORIGINS
+        value: https://sushmitha-rate-limiter.vercel.app,https://frontend-neon-kappa-76.vercel.app
